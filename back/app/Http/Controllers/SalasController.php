@@ -72,6 +72,6 @@ class SalasController extends Controller
     {
         $sala = Salas::find($id);
         $sala->delete();
-        return response()->json("Sala eliminada con exito");
+        return response()->json("Sala eliminada con exito!");
     }
 }
