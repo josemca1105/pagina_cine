@@ -36,7 +36,7 @@ class PeliculasController extends Controller
             $imageName = time().".".$ext;
             $img->move(public_path().'/uploads/', $imageName);
 
-            Peliculas::create([
+            $pelicula = Peliculas::create([
                 'nombre' => $request->nombre,
                 'imagen' => $imageName,
                 'descripcion' => $request->descripcion,
@@ -55,7 +55,14 @@ class PeliculasController extends Controller
                 'status' => true,
                 'message' => 'Imagen subida con exito',
                 'path' => asset('/uploads/'.$imageName),
-                'data' => $image
+                'data' => [
+                    'id' => $pelicula->id,
+                    'nombre' => $pelicula->nombre,
+                    'descripcion' => $pelicula->descripcion,
+                    'duracion' => $pelicula->duracion,
+                    'genero' => $pelicula->genero,
+                    'estreno' => $pelicula->estreno
+                ]
             ], 200);
 
         } catch (\Exception $e) {
