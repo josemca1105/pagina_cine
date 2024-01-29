@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\PeliculasController;
+use App\Http\Controllers\SalasController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -15,6 +16,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// rutas salas
+Route::get('salas/', [SalasController::class, 'index']);
+Route::get('sala/{id}', [SalasController::class, 'show']);
+Route::post('salas/create', [SalasController::class, 'store']);
+Route::delete('salas/delete/{id}', [SalasController::class, 'destroy']);
+
+// rutas peliculas
 Route::get('peliculas/', [PeliculasController::class, 'index']);
 Route::get('pelicula/{id}', [PeliculasController::class, 'show']);
 Route::post('peliculas/create', [PeliculasController::class, 'store']);

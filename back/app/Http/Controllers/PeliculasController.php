@@ -22,8 +22,8 @@ class PeliculasController extends Controller
         $validator = Validator::make($request->all(), [
             'nombre' => 'required|string|max:255',
             'imagen' => 'required|image|mimes:jpeg,png,jpg',
-            'descripcion' => 'required|string',
-            'duracion' => 'required|string',
+            'descripcion' => 'required|string|max:300',
+            'duracion' => 'required|string|max:1',
             'genero' => 'required|string',
             'estreno' => 'required|string'
         ]);
@@ -59,7 +59,7 @@ class PeliculasController extends Controller
 
             return response()->json([
                 'status' => true,
-                'message' => 'Imagen subida con exito',
+                'message' => 'Imagen subida con exito!',
                 'path' => asset('/uploads/'.$imageName),
                 'data' => [
                     'id' => $pelicula->id,
