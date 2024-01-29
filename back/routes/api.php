@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\PeliculasController;
 use App\Http\Controllers\SalasController;
+use App\Http\Controllers\UsuariosController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -15,6 +16,12 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "api" middleware group. Make something great!
 |
 */
+
+// rutas usuarios
+Route::get('usuarios/', [UsuariosController::class, 'index']);
+Route::get('usuario/{id}', [UsuariosController::class, 'show']);
+Route::post('usuarios/create', [UsuariosController::class, 'store']);
+Route::delete('usuarios/delete/{id}', [UsuariosController::class, 'destroy']);
 
 // rutas salas
 Route::get('salas/', [SalasController::class, 'index']);

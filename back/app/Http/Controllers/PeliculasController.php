@@ -34,9 +34,9 @@ class PeliculasController extends Controller
                 'errors' => $validator->messages()
             ], 422);
         }
+
         try {
             //code...
-
             $img = $request->imagen;
             $ext = $img->getClientOriginalExtension();
             $imageName = time().".".$ext;
