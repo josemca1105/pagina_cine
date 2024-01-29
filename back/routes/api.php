@@ -15,7 +15,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('peliculas/', [PeliculasController::class, 'index']);
+Route::get('pelicula/{id}', [PeliculasController::class, 'show']);
 Route::post('peliculas/create', [PeliculasController::class, 'store']);
+Route::delete('peliculas/delete/{id}', [PeliculasController::class, 'destroy']);
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();

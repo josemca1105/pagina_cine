@@ -5,11 +5,17 @@ namespace App\Http\Controllers;
 use App\Models\Peliculas;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
-
+use Illuminate\Support\Facades\File;
 
 class PeliculasController extends Controller
 {
     //
+    public function index(Request $request)
+    {
+        $pelicula = Peliculas::all();
+        return response()->json($pelicula);
+    }
+
     public function store(Request $request)
     {
         //
@@ -71,5 +77,25 @@ class PeliculasController extends Controller
                 'message' => 'Algo salio mal!'
             ], 500);
         }
+    }
+
+    public function show($id)
+    {
+        $contact = Peliculas::find($id);
+        return response()->json($contact);
+    }
+
+    public function destroy($id)
+    {
+        $pelicula = Peliculas::find($id);
+        $imagePath = public_path().'/uploads/'.$pelicula->imagen;
+
+        if (File::exists($imagePath)) {
+            File::delete($imagePath);
+        }
+
+        $pelicula->delete();
+
+        return response()->json("Pelicula Eliminada!");
     }
 }
