@@ -21,6 +21,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('usuarios/', [UsuariosController::class, 'index']);
 Route::get('usuario/{id}', [UsuariosController::class, 'show']);
 Route::post('usuarios/create', [UsuariosController::class, 'store']);
+Route::put('usuarios/update/{id}', [UsuariosController::class, 'update']);
 Route::delete('usuarios/delete/{id}', [UsuariosController::class, 'destroy']);
 
 // rutas salas
