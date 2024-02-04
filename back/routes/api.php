@@ -18,11 +18,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 // rutas usuarios
+Route::post('login/', [UsuariosController::class, 'login']);
 Route::get('usuarios/', [UsuariosController::class, 'index']);
-Route::get('usuario/{id}', [UsuariosController::class, 'show']);
 Route::post('usuarios/create', [UsuariosController::class, 'store']);
-Route::put('usuarios/update/{id}', [UsuariosController::class, 'update']);
-Route::delete('usuarios/delete/{id}', [UsuariosController::class, 'destroy']);
+Route::get('usuario/{id}', [UsuariosController::class, 'show']);
+Route::put('usuario/update/{id}', [UsuariosController::class, 'update']);
+Route::delete('usuario/delete/{id}', [UsuariosController::class, 'destroy']);
 
 // rutas salas
 Route::get('salas/', [SalasController::class, 'index']);
