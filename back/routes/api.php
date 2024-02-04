@@ -22,7 +22,6 @@ Route::post('login/', [UsuariosController::class, 'login']);
 Route::get('usuarios/', [UsuariosController::class, 'index']);
 Route::post('usuarios/create', [UsuariosController::class, 'store']);
 Route::get('usuario/{id}', [UsuariosController::class, 'show']);
-Route::put('usuario/update/{id}', [UsuariosController::class, 'update']);
 Route::delete('usuario/delete/{id}', [UsuariosController::class, 'destroy']);
 
 // rutas salas
