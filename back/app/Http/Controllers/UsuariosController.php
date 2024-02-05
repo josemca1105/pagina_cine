@@ -60,10 +60,10 @@ class UsuariosController extends Controller
         return response()->json('Usuario eliminado exitosamente!');
     }
 
-    function login(Request $req)
+    function login(Request $request)
     {
-        $usuario = Usuarios::where("email", $req->email)->first();
-        if (!$usuario || !Hash::check($req->password, $usuario->password)) {
+        $usuario = Usuarios::where("email", $request->email)->first();
+        if (!$usuario || !Hash::check($request->password, $usuario->password)) {
             return response()->json([
                 'status' => 422,
                 'message' => 'Datos de usuario erroneos'
