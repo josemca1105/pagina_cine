@@ -19,8 +19,8 @@ use Illuminate\Support\Facades\Route;
 
 // rutas usuarios
 Route::post('login/', [UsuariosController::class, 'login']);
+Route::post('register/', [UsuariosController::class, 'store']);
 Route::get('usuarios/', [UsuariosController::class, 'index']);
-Route::post('usuarios/create', [UsuariosController::class, 'store']);
 Route::get('usuario/{id}', [UsuariosController::class, 'show']);
 Route::delete('usuario/delete/{id}', [UsuariosController::class, 'destroy']);
 
