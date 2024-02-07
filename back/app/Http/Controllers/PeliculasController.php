@@ -23,7 +23,7 @@ class PeliculasController extends Controller
             'nombre' => 'required|string|max:255',
             'imagen' => 'required|image|mimes:jpeg,png,jpg',
             'descripcion' => 'required|string|max:300',
-            'duracion' => 'required|string|max:1',
+            'duracion' => 'required|string',
             'genero' => 'required|string',
             'estreno' => 'required|string'
         ]);
