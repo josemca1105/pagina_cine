@@ -60,7 +60,7 @@ h3 {
 
 button {
   position: absolute;
-  top: 70%;
+  top: 75%;
   left: 5%;
   padding: 20px 70px;
   font-size: 30px;
@@ -78,6 +78,31 @@ button:hover {
 }
 
 button:active {
+  color: #f1f1f1;
+  background-color: #000;
+}
+
+
+a {
+  position: absolute;
+  top: 89%;
+  left: 14%;
+  padding: 10px 40px;
+  font-size: 30px;
+  border: 2px solid #fff;
+  background: none;
+  color: #f1f1f1;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+a:hover {
+  color: #000;
+  background-color: #aaaaaa;
+}
+
+a:active {
   color: #f1f1f1;
   background-color: #000;
 }

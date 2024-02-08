@@ -12,7 +12,8 @@ import { Router } from '@angular/router';
 })
 export class PeliculasCreateComponent {
 
-  imagen: string = '';
+  imagen: any;
+
   nombre: string = '';
   descripcion: string = '';
   duracion: string = '';
@@ -22,6 +23,8 @@ export class PeliculasCreateComponent {
   peliculasArray: any[] = [];
 
   currentPeliculaID = '';
+
+  uploadedFileName: string [] = [];
 
   constructor(private http: HttpClient, private router: Router) {
     this.getAllPelicula();
@@ -34,26 +37,39 @@ export class PeliculasCreateComponent {
   }
 
   register() {
-    let bodyData = {
-      'imagen': this.imagen,
-      'nombre': this.nombre,
-      'descripcion': this.descripcion,
-      'duracion': this.duracion,
-      'genero': this.genero,
-      'estreno': this.estreno
-    };
+    // let bodyData = {
+    //   'nombre': this.nombre,
+    //   'descripcion': this.descripcion,
+    //   'duracion': this.duracion,
+    //   'genero': this.genero,
+    //   'estreno': this.estreno
+    // };
 
-    this.http.post('http://127.0.0.1:8000/api/peliculas/create', bodyData).subscribe((resultData: any) => {
+    var formData = new FormData();
+    formData.append('file', this.imagen, this.imagen.name);
+    formData.append('nombre', this.nombre);
+    formData.append('descripcion', this.descripcion);
+    formData.append('duracion', this.duracion);
+    formData.append('genero', this.genero);
+    formData.append('estreno', this.estreno);
+
+    this.http.post('http://127.0.0.1:8000/api/peliculas/create', formData).subscribe((resultData: any) => {
       alert('Pelicula creada con exito!');
       this.getAllPelicula();
-      this.imagen = '';
       this.nombre = '';
       this.descripcion = '';
       this.duracion = '';
       this.genero = '';
       this.estreno = '';
+      this.imagen = '';
       this.router.navigateByUrl('peliculas');
     });
+  }
+
+  uploadImage(event: any) {
+    // console.log(event);
+    this.imagen = event.target.files[0];
+    console.log(this.imagen);
   }
 
   savePelicula() {
