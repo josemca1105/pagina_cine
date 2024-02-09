@@ -32,7 +32,7 @@ img {
   position: absolute;
   color: #fff;
   padding: 50px 80px;
-  font-size: 125px;
+  font-size: 110px;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   text-transform: uppercase;
   letter-spacing: 10px;
@@ -42,8 +42,8 @@ img {
   position: absolute;
   top: 200px;
   padding: 80px 80px;
-  color: #000;
-  font-size: 25px;
+  color: #f1f1f1;
+  font-size: 22px;
   font-family: sans-serif;
 }
 
@@ -75,7 +75,7 @@ button:active {
 a {
   position: absolute;
   top: 89%;
-  left: 13%;
+  left: 14%;
   padding: 10px 40px;
   font-size: 30px;
   border: 2px solid #fff;
