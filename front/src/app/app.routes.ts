@@ -7,6 +7,10 @@ import { SalasCreateComponent } from './Pages/salas-create/salas-create.componen
 import { PeliculasComponent } from './Pages/peliculas/peliculas.component';
 import { PeliculasCreateComponent } from './Pages/peliculas-create/peliculas-create.component';
 import { Movie1Component } from './Pages/Movies/movie1/movie1.component';
+import { Movie2Component } from './Pages/Movies/movie2/movie2.component';
+import { Movie3Component } from './Pages/Movies/movie3/movie3.component';
+import { Movie4Component } from './Pages/Movies/movie4/movie4.component';
+import { Movie5Component } from './Pages/Movies/movie5/movie5.component';
 
 export const routes: Routes = [
   { path: '', component: HomePageComponent, title: 'Inicio' },
@@ -17,5 +21,9 @@ export const routes: Routes = [
   { path: 'salas/create', component: SalasCreateComponent, title: 'Crear Salas' },
   { path: 'peliculas', component: PeliculasComponent, title: 'Peliculas' },
   { path: 'peliculas/create', component: PeliculasCreateComponent, title: 'Crear Peliculas' },
-  { path: 'movies/1', component: Movie1Component, title: 'Pelicula 1' },
+  { path: 'movies/1', component: Movie1Component, title: 'John Wick' },
+  { path: 'movies/2', component: Movie2Component, title: 'Interestelar' },
+  { path: 'movies/3', component: Movie3Component, title: 'Infinity War' },
+  { path: 'movies/4', component: Movie4Component, title: 'El Exorcista' },
+  { path: 'movies/5', component: Movie5Component, title: 'La La Land' },
 ];

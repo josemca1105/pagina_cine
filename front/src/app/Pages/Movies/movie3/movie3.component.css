@@ -10,7 +10,7 @@
   align-items: center;
   height: 94vh;
   max-width: 100%;
-  background-image: url('../../../../assets/1/h.jpeg');
+  background-image: url('../../../../assets/3/igi.jpg');
   background-size: cover;
 }
 
@@ -51,10 +51,10 @@ h3 {
 
 .description {
   position: absolute;
-  top: 220px;
+  top: 190px;
   padding: 80px 80px;
   color: #f1f1f1;
-  font-size: 20px;
+  font-size: 22px;
   font-family: sans-serif;
 }
 

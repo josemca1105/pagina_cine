@@ -10,7 +10,7 @@
   align-items: center;
   height: 94vh;
   max-width: 100%;
-  background-image: url('../../../../assets/1/h.jpeg');
+  background-image: url('../../../../assets/2/wallpaper.jpg');
   background-size: cover;
 }
 
@@ -38,23 +38,12 @@ img {
   letter-spacing: 10px;
 }
 
-h3 {
-  position: absolute;
-  font-size: 40px;
-  color: #fff;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 56px;
-  top: 200px;
-  left: 80px;
-}
-
 .description {
   position: absolute;
-  top: 220px;
+  top: 200px;
   padding: 80px 80px;
-  color: #f1f1f1;
-  font-size: 20px;
+  color: #000;
+  font-size: 25px;
   font-family: sans-serif;
 }
 
@@ -86,7 +75,7 @@ button:active {
 a {
   position: absolute;
   top: 89%;
-  left: 14%;
+  left: 13%;
   padding: 10px 40px;
   font-size: 30px;
   border: 2px solid #fff;
