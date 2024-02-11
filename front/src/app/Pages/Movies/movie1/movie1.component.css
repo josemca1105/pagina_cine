@@ -58,7 +58,7 @@ h3 {
   font-family: sans-serif;
 }
 
-button {
+.sala_1 {
   position: absolute;
   top: 75%;
   left: 5%;
@@ -69,15 +69,15 @@ button {
   color: #f1f1f1;
   text-transform: uppercase;
   letter-spacing: 5px;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: 'Trebuchet MS';
 }
 
-button:hover {
+.sala_1:hover {
   color: #000;
   background-color: #f1f1f1;
 }
 
-button:active {
+.sala_1:active {
   color: #f1f1f1;
   background-color: #000;
 }

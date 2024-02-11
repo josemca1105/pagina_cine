@@ -1,0 +1,51 @@
+.container {
+  margin-top: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  perspective: 900px;
+}
+
+.box {
+  background-color: #000;
+  width: 200px;
+  height: 200px;
+  transform-style: preserve-3d;
+  animation: girar 1s ease-in-out alternate infinite;
+}
+
+@keyframes girar {
+  0% {
+    transform: none;
+  }
+  50% {
+    transform: rotateY(90deg);
+  }
+  100% {
+    transform: none;
+  }
+}
+
+.face {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+}
+
+.face_1 {
+  background-color: aqua;
+  transform: translateZ(100px);
+}
+.face_2 {
+  background-color: white;
+  transform: translateZ(-100px);
+}
+.face_3 {
+  background-color: green;
+  transform: rotateX(90deg) translateY(0px) translateZ(100px);
+}
+.face_4 {
+  background-color: yellow;
+  transform: rotateX(-90deg) translateY(0px) translateZ(100px);
+}

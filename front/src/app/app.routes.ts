@@ -11,6 +11,7 @@ import { Movie3Component } from './Pages/Movies/movie3/movie3.component';
 import { Movie4Component } from './Pages/Movies/movie4/movie4.component';
 import { Movie5Component } from './Pages/Movies/movie5/movie5.component';
 import { PeliculasPageComponent } from './Pages/peliculas-page/peliculas-page.component';
+import { Sala1Component } from './Pages/sala-1/sala-1.component';
 
 export const routes: Routes = [
   { path: '', component: HomePageComponent, title: 'Inicio' },
@@ -18,6 +19,7 @@ export const routes: Routes = [
   { path: 'login', component: LoginPageComponent, title: 'Login' },
   { path: 'register', component: RegisterPageComponent, title: 'Registrar Usuario' },
   { path: 'salas', component: SalasPageComponent, title: 'Salas' },
+  { path: 'sala/1', component: Sala1Component, title: 'Sala 1' },
   { path: 'salas/create', component: SalasCreateComponent, title: 'Crear Salas' },
   { path: 'peliculas', component: PeliculasPageComponent, title: 'Peliculas' },
   { path: 'peliculas/create', component: PeliculasCreateComponent, title: 'Crear Peliculas' },
