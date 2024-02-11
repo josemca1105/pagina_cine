@@ -19,7 +19,7 @@ class SalasController extends Controller
     {
         $validator = Validator::make($request->all(), [
             'nombre' => 'required|string|max:1',
-            'asientos' => 'required|string|min:2|max:3',
+            'asientos' => 'required|integer',
             'desde' => 'required|string',
             'hasta' => 'required|string',
             'tipo' => 'required|string'

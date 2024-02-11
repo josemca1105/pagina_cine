@@ -4,13 +4,13 @@ import { LoginPageComponent } from './Pages/login-page/login-page.component';
 import { RegisterPageComponent } from './Pages/register-page/register-page.component';
 import { SalasPageComponent } from './Pages/salas-page/salas-page.component';
 import { SalasCreateComponent } from './Pages/salas-create/salas-create.component';
-import { PeliculasComponent } from './Pages/peliculas/peliculas.component';
 import { PeliculasCreateComponent } from './Pages/peliculas-create/peliculas-create.component';
 import { Movie1Component } from './Pages/Movies/movie1/movie1.component';
 import { Movie2Component } from './Pages/Movies/movie2/movie2.component';
 import { Movie3Component } from './Pages/Movies/movie3/movie3.component';
 import { Movie4Component } from './Pages/Movies/movie4/movie4.component';
 import { Movie5Component } from './Pages/Movies/movie5/movie5.component';
+import { PeliculasPageComponent } from './Pages/peliculas-page/peliculas-page.component';
 
 export const routes: Routes = [
   { path: '', component: HomePageComponent, title: 'Inicio' },
@@ -19,7 +19,7 @@ export const routes: Routes = [
   { path: 'register', component: RegisterPageComponent, title: 'Registrar Usuario' },
   { path: 'salas', component: SalasPageComponent, title: 'Salas' },
   { path: 'salas/create', component: SalasCreateComponent, title: 'Crear Salas' },
-  { path: 'peliculas', component: PeliculasComponent, title: 'Peliculas' },
+  { path: 'peliculas', component: PeliculasPageComponent, title: 'Peliculas' },
   { path: 'peliculas/create', component: PeliculasCreateComponent, title: 'Crear Peliculas' },
   { path: 'movies/1', component: Movie1Component, title: 'John Wick' },
   { path: 'movies/2', component: Movie2Component, title: 'Interestelar' },
