@@ -21,8 +21,8 @@ class PeliculasController extends Controller
         //
         $validator = Validator::make($request->all(), [
             'nombre' => 'required|string|max:255',
-            'imagen' => 'required|image|mimes:jpeg,png,jpg',
-            'descripcion' => 'required|string|max:300',
+            'imagen' => 'required|image',
+            'descripcion' => 'required|string',
             'duracion' => 'required|string',
             'genero' => 'required|string',
             'estreno' => 'required|string'
@@ -86,11 +86,9 @@ class PeliculasController extends Controller
                 'estreno' => $request->estreno,
             ]);
 
-            // Storage::disk('public')->put($imageName, file_get_contents($request->image));
             // la imagen se guarda en storage/app/public
             $image = new Peliculas;
             $image->img = $imageName;
-            // $image->save();
 
             return response()->json([
                 'status' => true,
@@ -124,6 +122,21 @@ class PeliculasController extends Controller
             ], 404);
         }
         return response()->json($contact);
+    }
+
+    public function getImage($id)
+    {
+        $pelicula = Peliculas::findOrFail($id);
+        $path = public_path('uploads/' . $pelicula->imagen);
+
+        if (!File::exists($path)) {
+            return response()->json([
+                'status' => 404,
+                'message' => 'Imagen no encontrada'
+            ], 404);
+        }
+
+        return response()->file($path);
     }
 
     public function destroy($id)

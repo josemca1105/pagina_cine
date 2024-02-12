@@ -34,11 +34,11 @@
                   *ngFor="let PeliculaItem of peliculaArray | paginate: { itemsPerPage: 3, currentPage: p }"
                   class="border-b transition duration-300 ease-in-out hover:bg-neutral-100 dark:border-neutral-500 dark:hover:bg-neutral-600">
                   <td class="whitespace-nowrap px-6 py-4">
-                    <img [src]="PeliculaItem.imagen" alt="pelicula" width="100" height="150">
+                    <img [src]="getImageUrl(PeliculaItem.id)" alt="pelicula" width="100" height="150">
                   </td>
                   <td class="whitespace-nowrap px-6 py-4"> {{ PeliculaItem.nombre }} </td>
                   <td class="whitespace-nowrap px-6 py-4"> {{ PeliculaItem.descripcion }} </td>
-                  <td class="whitespace-nowrap px-6 py-4"> {{ PeliculaItem.duracion }} </td>
+                  <td class="whitespace-nowrap px-6 py-4"> {{ PeliculaItem.duracion }}h </td>
                   <td class="whitespace-nowrap px-6 py-4"> {{ PeliculaItem.genero }} </td>
                   <td class="whitespace-nowrap px-6 py-4"> {{ PeliculaItem.estreno }} </td>
                   <td class="whitespace-nowrap px-6 py-4">

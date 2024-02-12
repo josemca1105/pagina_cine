@@ -34,6 +34,10 @@ export class PeliculasPageComponent {
     });
   }
 
+  getImageUrl(id: number): string {
+    return `http://127.0.0.1:8000/api/imagen/${id}`; // Reemplace con la URL de su API
+  }
+
   setDelete(data: any) {
     this.http.delete("http://127.0.0.1:8000/api/peliculas/delete" + "/" + data.id).subscribe((resultData: any) => {
         // console.log(resultData);
